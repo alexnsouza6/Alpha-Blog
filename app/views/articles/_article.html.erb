@@ -1,20 +1,10 @@
-<% if obj.instance_of? User %>
-	<% if obj.articles.empty? == true %>
-			<h2 align="center">There's no Articles in name of <%= "#{@user.username}"%> in this Website...</h2>
-			<h3 align="center">Please, create the first one!</h3>
-			<div align="center">
-				<%= link_to "Create an Article", new_article_path, class: "btn btn-primary btn-lg" %>
-			</div>
-	<% end %>
-
-<% else %>
-	<% if obj.empty? == true %>
-			<h2 align="center">There's no Articles in this Website...</h2>
-			<h3 align="center">Please, be the first to create!</h3>
-			<div align="center">
-				<%= link_to "Create an Article", new_article_path, class: "btn btn-primary btn-lg" %>
-			</div>
-	<% end %>
+<% if obj.empty? == true %>
+		<h2 align="center">There's no Articles in name of <%= @user.username %> in this Website...</h2>
+		<h3 align="center">Please, log in and create some!</h3>
+		<div align="center">
+			<h3>Need some repair.</h3>
+			<%= link_to "Create an Article", new_article_path, class: "btn btn-primary btn-lg" %>
+		</div>
 <% end %>
 
 <% obj.each do |article| %>

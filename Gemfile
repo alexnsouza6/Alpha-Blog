@@ -13,6 +13,9 @@ gem 'puma', '~> 3.7'
 #Use user system
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
