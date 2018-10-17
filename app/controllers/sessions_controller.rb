@@ -5,13 +5,13 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		user = User.find_by(email: params[:session][:email].downcase)
+  user = User.find_by(email: params[:session][:email].downcase)
 		if user && user.authenticate(params[:session][:password])
-			session[:user_id] = user.id #Saving user id in the session. The browser cookies handles this
-			flash[:success] = "Logged in Successufully"
+			session[:user_id] = user.id # Saving user id in the session. The browser cookies handles this
+			flash[:success] = 'Logged in Successufully'
 			redirect_to user_path(user)
 		else
-			flash.now[:danger] = "Something wrong with login info"
+			flash.now[:danger] = 'Something wrong with login info'
 			render 'new'
 		end
 
