@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
 
   resources :articles
-
+  resources :categories
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
 
@@ -12,5 +12,4 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
-  # post 'users', to: 'users#create' ---> This command does the same as the command above
 end
