@@ -59,6 +59,8 @@ group :development, :test do
   gem 'database_cleaner'
   # This generator will create a .feature file and a _steps.rb file related to the given feature, in any language you want
   gem 'gemaina', '~> 1.0'
+  # A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :development do
