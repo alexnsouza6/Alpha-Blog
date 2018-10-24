@@ -47,6 +47,18 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # RSpec for Rails-3+ http://relishapp.com/rspec/rspec-rails
+  gem 'rspec-rails', '~> 3.8'
+    # Factory Bot for Rails
+  gem 'factory_bot_rails'
+  # Code style checking for RSpec files
+  gem 'rubocop-rspec'
+  gem 'shoulda-matchers'
+  gem 'cucumber-rails', require: false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+  # This generator will create a .feature file and a _steps.rb file related to the given feature, in any language you want
+  gem 'gemaina', '~> 1.0'
 end
 
 group :development do
