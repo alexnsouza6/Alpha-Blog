@@ -19,7 +19,6 @@ Dado("que o campo nome esteja preenchido:") do |table|
 end
 
 Quando("eu clicar em {string}") do |add_category|
-  @categories_num = Categorie.count
   click_button("#{add_category}")
 end
 
