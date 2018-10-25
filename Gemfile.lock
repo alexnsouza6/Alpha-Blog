@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: 7ce20faa0fa15539af391faffe27ee3674025d4e
+  branch: master
+  specs:
+    faker (1.9.1)
+      i18n (>= 0.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -308,6 +316,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   factory_bot_rails
+  faker!
   gemaina (~> 1.0)
   jbuilder (~> 2.5)
   jquery-rails
