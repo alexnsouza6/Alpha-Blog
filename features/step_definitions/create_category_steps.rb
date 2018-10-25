@@ -1,7 +1,7 @@
 # This is the steps file referred to create_category feature
 # Place your code relative to that feature here
-Dado("esteja cadastrado e logado como {string}, {string}") do |email, password|
-  @user = User.create(email: email, username: 'Admin', password: password)
+Dado("esteja cadastrado e logado como {string}, {string} e que eu seja Admin") do |email, password|
+  @user = User.create(email: email, username: 'Admin', password: password, admin: true)
   visit(login_path)
   fill_in('Email', with: @user.email)
   fill_in('Password', with: @user.password)
